@@ -4,7 +4,9 @@
 - **Network**
 
 > 📞 Low Energy Interruption
+> 
 > Point 484
+> 
 >My friend, Badarawuhi from SMKN Jawa Timur transferred me a file silently without me knowing what kind of file that was transferred to my Samsung phone from his laptop and he immediately cancelled it.
 >
 >Luckily, I have launched my special sniffing tools to capture those transfer history. Can you get that file? He says it contain a flag inside of it!
