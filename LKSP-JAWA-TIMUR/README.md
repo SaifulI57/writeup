@@ -26,7 +26,7 @@ Add additional filter for a better look:
 
 ![](https://github.com/SaifulI57/writeup/blob/wumbo/LKSP-JAWA-TIMUR/files/2.png)
 
-as you can see in the printable text of the first data.data, the file signature is jpg, and if we follow the standard JPEG, the file content will start with byte '0xFF 0xD8' and end with byte '0xFF 0xD9', we have to remove the first 33 bytes of the first data channel 12. And here is the command to retrieve the JPEG file using tshark:
+as you can see in the printable text of the first data.data, the file signature is jpg, and if we follow the standard JPEG, the file content will start with byte '0xFF 0xD8' and end with byte '0xFF 0xD9', we have to remove the first 33 bytes of the first data.data. And here is the command to retrieve the JPEG file using tshark:
 
 ```bash
 tshark.exe -r transfer.pcapng -Y "btrfcomm.dlci == 0x18 and data.len > 741" -T fields -e data.data | tr -d "\n" | xxd -r -p | tail -c +33 > flag.jpg
